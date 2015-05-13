@@ -5,29 +5,29 @@ module Lita
     class Eightball < Handler
 
       RESPONSES = [
-        "It is certain",
-        "It is decidedly so",
-        "Without a doubt",
-        "Yes - definitely",
-        "You may rely on it",
-        "As I see it, yes",
-        "Most likely",
-        "Outlook good",
-        "Signs point to yes",
-        "Yes",
-        "Reply hazy, try again",
-        "Ask again later",
-        "Better not tell you now",
-        "Cannot predict now",
-        "Concentrate and ask again",
-        "Don't count on it",
-        "My reply is no",
-        "My sources say no",
-        "Outlook not so good",
-        "Very doubtful"
+        "For sure it so.",
+        "So yes is it says Splug.",
+        "No doubts do Splug has.",
+        "All of yes, thinks Splug.",
+        "Most likely not worst idea you has.",
+        "As likely as Splug stealing you nice things.",
+        "Splug say maybe ok.",
+        "Outlook not un-bad.",
+        "Oracle point to meh.",
+        "Yesh.",
+        "Splug hazy, try again",
+        "Ask again later. Splug eat bugs at now.",
+        "Better not for you know that.",
+        "Oracle mad Splug, no tell oracles.",
+        "Splug think you dumb. Him no answer.",
+        "Don't make no bets on it.",
+        "Probablies not.",
+        "Oracle says no.",
+        "It either way could go.",
+        "Splug knows but him no tell you."
       ]
       
-      route %r{8ball|eightball}i, :shake, command: true, help: { "8ball" => "Shakes the eightball" }
+      route %r{8ball|eightball|oracle}i, :shake, command: true, help: { "oracle" => "Shakes the eightball" }
 
       def shake(response)
         response.reply RESPONSES.shuffle.first
